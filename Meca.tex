@@ -1,0 +1,578 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{upgreek} % provides peta
+\usepackage{gensymb} % provides degree
+\usepackage{mathtools}
+\usepackage[margin=2.5cm]{geometry}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don’t use monospace font for urls
+%\setlength\footskip{10pt}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\date{}
+
+\begin{document}
+
+\section{Mécanique}\label{muxe9canique}
+
+\subsection{Thermodynamique}\label{thermodynamique}
+
+\subsubsection{Système}\label{systuxe8me}
+
+Un \textbf{système} est un corps ou un ensemble de corps de masse déterminée et délimitée dans l’espace.
+
+Un système peut être \textbf{ouvert} (partie d’une canalisation) ou \textbf{fermé} (piston).
+
+Un système \textbf{ouvert} échange de \textbf{l’énergie} et de la \textbf{matière} avec le milieu extérieur.
+
+Un système est \textbf{homogène} s’il contient \textbf{une seule phase}. \\
+Un système est \textbf{hétérogène} s’il contient plus d’une phase.
+
+Un système est \textbf{isotherme} si sa \textbf{température} est \textbf{constante}. \\
+Un système est \textbf{adiabatique} s’il \textbf{n’échange pas de chaleur} avec l’extérieur. \\
+Un système est \textbf{diathermique} s’il \textbf{échange de la chaleur} avec
+l’extérieur. \\
+
+Un système est \textbf{isolé} s’il est \textbf{fermé}, \textbf{calorifugé} et
+qu’\textbf{aucun travail} ne se produit dans le système. \\
+
+Un \textbf{système isolé} n’échange \textbf{ni matière, ni chaleur, ni
+travail} avec l’extérieur. \footnote{\url{https://fr.wikipedia.org/wiki/Système\_isolé}}
+
+
+\subsubsection{État}\label{uxe9tat}
+
+L’état thermodynamique d’un système est la description univoque de ce
+système.
+
+Cet état est fixé par un ensemble de variables d’état dont le choix est
+arbitraire.
+
+\subsubsection{Variables d’état}\label{variables-duxe9tat}
+
+Les variables d’état peuvent être \textbf{extensives} ou
+\textbf{intensives}.
+
+\paragraph{Variables d’état
+extensives}\label{variables-duxe9tat-extensives}
+
+Une variable est \textbf{extensive} si sa valeur dépend de la taille du
+système.
+
+Par exemple : $m$, $V$, $E$
+
+\paragraph{Variables d’état
+intensives}\label{variables-duxe9tat-intensives}
+
+Une variable est \textbf{intensive} si sa valeur ne dépend pas de la
+taille du système.
+
+Par exemple : $ T $, $ p $ ainsi que les grandeurs molaires
+($ v $, $ V $, $ e $, $ E $)
+
+\subsubsection{Fluide}\label{fluide}
+
+Un \textbf{fluide} est un gaz ou un liquide.
+
+Les \textbf{phases} possibles d’un \textbf{fluide} sont la phase
+\textbf{gazeuse}, la phase \textbf{liquide} et la phase \textbf{solide}.
+
+Un \textbf{cycle} consiste en une transformation qui ramène le fluide à
+son état initial.
+
+\subsubsection{Chaleur}\label{chaleur}
+
+La \textbf{chaleur} est une forme de \textbf{travail}, qui correspond à
+une augmentation ou une diminution de \textbf{l’agitation des
+particules} constituant la matière.
+
+\subsubsection{Travail}\label{travail}
+
+Le \textbf{travail d’une force} est l’énergie fournie par cette force
+lorsque son point d’application se déplace.
+
+Le \textbf{travail} est souvent noté \textbf{W}.
+
+Son unité est le \textbf{joules} (\textbf{J}).
+
+\paragraph{Joule}\label{joule}
+
+Le \textbf{joule} est le \textbf{travail} d’une force motrice
+d’\textbf{un newton} dont le point d’application se déplace d’\textbf{un
+mètre} dans la direction de la force.
+
+$$ 1 J = 1 N \cdot m = \dfrac{ 1 kg \cdot m \cdot m }{ s } = 1 \cdot \dfrac { kg \cdot m^2}{ s }  $$
+
+\begin{itemize}
+\tightlist
+\item
+  $J$ = joule
+\item
+  $N$ = newton $ \left[ \dfrac{kg \cdot m}{s^2} \right] $
+\item
+  $m$ = mètre \\
+\end{itemize}
+
+
+Un \textbf{joule} est aussi l’énergie fournie par une puissance de
+\textbf{1 Watt} pendant \textbf{1 seconde}.
+
+$$ 1 J = 1 W \cdot s $$
+
+Un \textbf{joule} est l’énergie requise pour élever la température d’un
+gramme d’air d’un degré Celsius.
+
+\paragraph{Newton}\label{newton}
+
+Le \textbf{newton} est l’unité de mesure de la \textbf{force}. \footnote{\url{https://fr.wikipedia.org/wiki/Newton\_(unité)}}
+
+Un \textbf{newton} est la force capable de communiquer à une masse de
+\textbf{1kg} une accélération de \textbf{1m/s²}.
+
+$$ 1 N = 1 \cdot \dfrac{kg \cdot m}{s^2} $$
+
+
+
+\subsubsection{Intensives massiques}\label{intensives-massiques}
+
+\paragraph{Volume massique}\label{volume-massique}
+
+$$ v = V / m ~ [ m^3 / kg ] $$
+
+\begin{itemize}
+\tightlist
+\item
+  $V$ = volume ~~ \([m^3]\)
+\item
+  $m$ = masse ~~ \([kg]\) \\
+\end{itemize}
+
+Le volume massique d’un objet est l’inverse de sa masse volumique.
+
+$$ v = \dfrac{V}{m} = \dfrac{1}{\rho} $$
+
+\paragraph{Énergie massique}\label{uxe9nergie-massique}
+
+$$ e = E / m ~ [J / kg]$$
+
+\begin{itemize}
+\tightlist
+\item
+  $E$ = énergie ~~ $ [J] $
+\item
+  $m$ = masse ~~ $ [kg] $
+\end{itemize}
+
+\subsubsection{Intensives molaires}\label{intensives-molaires}
+
+\paragraph{Volume molaire}\label{volume-molaire}
+
+$$ \Upsilon = V/M $$
+
+\begin{itemize}
+\tightlist
+\item
+  $V$ = volume ~~ $ [m^3] $
+\item
+  $M$ = masse molaire ~~ $ [moles] $
+\end{itemize}
+
+\paragraph{Énergie molaire}\label{uxe9nergie-molaire}
+
+$$ \epsilon = E / M $$
+
+\begin{itemize}
+\tightlist
+\item
+  $E$ = énergie ~~ $ [J] $
+\item
+  $M$ = masse molaire ~~ $ [moles] $
+\end{itemize}
+
+\paragraph{Quantité de chaleur (formule différentielle)}\label{quantituxe9-de-chaleur}
+
+$$ \delta ~ Q = m \cdot c \cdot \Delta T $$ 
+
+\begin{itemize}
+\tightlist
+\item
+  $Q$ = élément infinitésimal de chaleur à un moment donné
+  ~~ $ [ J ] $
+\item
+  $m$ = masse ~~ $ [kg] $
+\item
+  $c$ = capacité thermique massique / chaleur massique
+  ~~ $ \left[ J / kg \cdot K \right] $
+\item
+  $\Delta T$ = différence de température subie par le fluide à un
+  moment ~~ $ [ K ] $
+\end{itemize}
+
+\paragraph{Puissance calorifique}\label{puissance-calorifique}
+
+$$ \dot{Q} = \dfrac{\delta ~ Q}{dt} = m \cdot c \cdot \dfrac{dT}{dt} $$
+
+\begin{itemize}
+\tightlist
+\item
+  puissance de la chaleur par unité de temps
+\item
+  $m$ = masse ~~ $ [kg] $
+\item
+  $c$ = capacité thermique massique / chaleur massique
+  ~~ $ \left[ J / kg \cdot K \right] $
+\end{itemize}
+
+\subsubsection{Transformation de
+compression}\label{transformation-de-compression}
+
+Une transformation est le passage d’un état à l’autre. \footnote{\url{https://fr.wikiversity.org/wiki/Transformations\_thermodynamiques/Transformations}}
+
+Une \textbf{transformation} est \textbf{réversible} si le chemin pour
+passer de l’état 1 à l’état 2 peut être pris dans l’autre sens. \\
+La transformation doit se dérouler en une succession d’états d’équilibre.
+Ce cas n’existe pas réellement, la réversibilité n’est jamais totale.
+
+Une \textbf{transformation} est \textbf{irréversible} si le chemin pour
+passer d’un état à l’autre ne peut être annulé.
+
+Une \textbf{transformation} est \textbf{quasi-statique} lorsque la
+réversibilité n’est pas totale mais suffisamment proche de l’équilibre,
+par des écarts infinitésimaux.
+
+\paragraph{Transformation isochore}\label{transformation-isochore}
+
+Le \textbf{volume du système} reste constant durant la transformation.
+
+Si le volume reste constant, on peut déduire que le travail à fournir
+est nul.
+
+La pression et la température peuvent varier.
+
+\paragraph{Transformation isobare}\label{transformation-isobare}
+
+La \textbf{pression du système} reste constante durant la
+transformation.
+
+\paragraph{Transformation isotherme}\label{transformation-isotherme}
+
+La \textbf{chaleur du système} reste constante durant la transformation.
+
+\paragraph{Transformation adiabatique}\label{transformation-adiabatique}
+
+Aucun transfert thermique n’est effectué avec l’extérieur durant la transformation.
+
+La chaleur ne reste pas forcément constante dans le système.
+
+\subsection{Équilibre thermodynamique}\label{equilibre-thermodynamique}
+
+Si le système est isolé du milieu extérieur et qu’aucune modification de ses variables d’état n’intervient, alors ce système est en équilibre thermodynamique.
+
+\subsubsection{Principe 0 (zéro)}\label{principe-0-zuxe9ro}
+
+« Lorsque 2 corps sont en équilibre thermique avec un 3e, ces 2 corps
+sont aussi en équilibre entre eux ».
+
+\subsubsection{Relation de la calorimétrie}\label{relation-de-la-calorimetrie}
+
+La quantité de chaleur échangée est proportionnelle :
+
+\begin{itemize}
+\tightlist
+\item
+  à la masse ;
+\item
+  à l’écart de température ;
+\item
+  à la capacité thermique massique.
+\end{itemize}
+
+Pendant un changement de phase, la température ne varie pas. La chaleur
+latente est utilisée durant le changement de phase.
+
+$$ Q = m \cdot l $$
+
+\begin{itemize}
+\tightlist
+\item
+  $ Q $ = chaleur  ~~ $ [ Joules ] $
+\item
+  $ m $ = masse ~~ $ [kg] $
+\item
+  $ l $ = chaleur latente \\
+\end{itemize}
+
+La \textbf{chaleur latente} change l’état physique d’une matière. Par opposition à la chaleur sensible qui modifie la température d’une matière. \footnote{\url{http://www.energieplus-lesite.be/index.php?id=11244}}
+
+
+
+\subsubsection{Loi de Fourier}\label{loi-fourier}
+
+$$ \delta \vec{\dot{Q}} = -k \cdot S \cdot \vec{grad}~ T $$
+
+\begin{itemize}
+	\item
+		$k$ = conduction thermique (conductivité) de l’élément
+	\item
+		$S$ = surface de contact / échange
+	\item	
+		$\vec{grad}~ T$ = vecteur de variation de la température
+\end{itemize}
+
+
+
+\subsection{Transfert de chaleur}\label{transfert-chaleur}
+
+\subsubsection{Conduction}\label{conduction}
+
+La conduction est la propagation de la chaleur de proche en proche d’un corps à l’autre par contact physique direct.
+
+
+$$ \dot{Q} = k \cdot S \cdot \dfrac{\Delta T}{L} $$
+
+\begin{itemize}
+	\item 
+		$ \dot{Q} $ = flux en mouvement ~~  $[Watt]$
+	\item
+		$ k $ = coefficient de conduction (conductivité) ~~ $[W/m \cdot K]$
+	\item
+		$ S $ = surface d’échange ~~ $[m^2]$
+	\item
+		$ \Delta T $ = différence de température ~~ $[\degree C]$ ou $[K]$
+	\item
+		$ L $ = $e$ = épaisseur ~~ $[mètres]$
+\end{itemize}
+
+
+
+$$ \dot{Q} = \dfrac{\Delta T}{R} $$
+
+\begin{itemize}
+	\item
+		$ \dot{Q} $ = flux en mouvement ~~ $[Watt]$
+	\item
+		$ \Delta T $ = différence de température ~~ $[\degree C]$ ou $[K]$
+	\item 
+		$ R $ = résistance ~~ $[\Omega]$
+\end{itemize}
+
+
+%
+\paragraph{Densité de flux}
+
+
+$$ \dot{q} = \dfrac{\dot{Q}}{S} $$
+
+\begin{itemize}
+	\item 
+		$ \dot{q} $ = densité de flux ~~ $[W/m^2]$
+	\item 
+		$ \dot{Q} $ = flux en mouvement ~~  $[Watt]$
+\end{itemize}
+
+
+
+\subsubsection{Convection}\label{convection}
+
+La convection est l’échange de chaleur entre une surface et un fluide en mouvement.
+
+
+$$ \dot{q} = h \cdot \Delta T $$
+
+\begin{itemize}
+	\item 
+		$ \dot{q} $ = densité de flux ~~ $[W/m^2]$
+	\item 
+		$ h $ = coefficient de convection ~~  $[W/m^2 \cdot K]$
+	\item
+		$ \Delta T $ = différence de température ~~ $[\degree C]$ ou $[K]$
+\end{itemize}
+
+
+
+\subsubsection{Rayonnement}\label{rayonnement}
+
+
+
+
+
+\subsubsection{Principe d’équivalence}\label{principe-equivalence}
+
+Lors de toute transformation cyclique d’un système thermodynamique
+fermé, \textbf{la somme des travaux mécaniques et des quantités de chaleur
+échangées} entre le système et son environnement est \textbf{nulle}.
+
+$$ \oint (\delta W + \delta Q) = 0 $$
+
+
+
+\subsection{Premier principe de la thermodynamique}\label{premier-principe-thermo}
+
+Au cours d’une transformation adiabatique, la \textbf{variation de l’énergie} d’un système est égale au \textbf{travail échangé} avec le milieu extérieur.
+
+$$ \Delta E = \sum \delta W + \sum \delta Q = 0 $$
+
+
+\newpage
+
+\subsubsection{Rendement}
+
+Le rendement mesure le rapport de l’énergie utile sur l’énergie consommée :
+
+$$ \upeta = \dfrac{\textrm{énergie utile}}{\textrm{énergie consommée}} = \pm x \% $$
+
+Ex: le rapport entre le travail utile fourni et la quantité de chaleur consommé.
+
+
+
+\subsubsection{Efficacité}
+
+Rapport de ce qui a été produit sur l’idéal.
+
+Aussi appelé coefficient de performance \footnote{\url{https://fr.wikipedia.org/wiki/Coefficient_de_performance}}.
+
+$$ \varepsilon = \dfrac{\textrm{produit}}{\textrm{idéal}} $$
+
+Sur base de la proposition de Thomson/Joule, qui s’applique pour toute machine effectuant une transformation réversible (par exemple une machine de Carnot) :
+
+$$ \left| \dfrac{\dot{Q}_{TH}}{\dot{Q}_{TB}} \right| \equiv \dfrac{T_H}{T_B}$$
+
+avec \begin{itemize}
+	\item 
+		$\dot{Q}_{TH}$ le débit de chaleur absorbé ou rejeté à haute température ;
+	\item
+		$\dot{Q}_{TB}$ le débit de chaleur absorbé ou rejeté à basse température ;
+	\item
+		$T_H$ et $T_B$ les températures en $Kelvin$ ;
+\end{itemize}
+
+ on peut en déduire  :
+ 
+ $$ \varepsilon 
+ = \dfrac{Q_{fr}}{W}
+ = \dfrac{1}{\dfrac{T_{ch}}{T_{fr}} - 1} $$
+ 
+\paragraph{Démonstration :}
+
+$$ \varepsilon 
+= \dfrac{Q_{fr}}{W} 
+= \dfrac{Q_{fr}}{Q_{ch} - Q_{fr}} 
+= \dfrac{Q_{fr} \cdot \dfrac{1}{Q_{fr}}}{(Q_{ch} - Q_{fr}) \cdot \dfrac{1}{Q_{fr}}} 
+= \dfrac{\dfrac{Q_{fr}}{Q_{fr}}}{\dfrac{Q_{ch}}{Q_{fr}} - \dfrac{Q_{fr}}{Q_{fr}}} 
+= \dfrac{1}{\dfrac{Q_{ch}}{Q_{fr}} - 1}
+= \dfrac{1}{\dfrac{T_{ch}}{T_{fr}} - 1} $$
+
+
+\newpage
+
+
+\subsubsection{Moteur de Carnot}
+
+Le rendement du moteur de Carnot produit du travail en utilisant la chaleur injectée. \\
+
+Un \textbf{rendement de 1} est \textbf{impossible} (monotherme).
+
+$$ \upeta = \left| \dfrac{W}{Q_{ch} } \right| = \dfrac{| W |}{Q_{ch}}  = \dfrac{|Q_{ch}|}{Q_{ch}} - \dfrac{|Q_{fr}|}{Q_{ch}} =  1 - \dfrac{|Q_{fr}|}{Q_{ch}} $$
+
+
+car d’après le \hyperref[principe-equivalence]{principe d’équivalence} \footnote{Voir page \pageref{principe-equivalence}}, $\delta W = -\delta Q$ donc $\delta W = -(Q_{ch} + Q_{fr})$, ce qui donne $\delta W = Q_{ch} - Q_{fr}$. \\
+
+
+\subsubsection{Frigo de Carnot}
+
+Le rendement du frigo de Carnot produit de la chaleur froide en utilisant le travail. \\
+
+Un \textbf{rendement supérieur à 1} est \textbf{possible} (efficacité frigo).
+
+$$ \upeta = \dfrac{Q_{fr}}{W} = \dfrac{1}{ \dfrac{|Q_{ch}|}{Q_{fr} } - 1 } $$
+
+
+
+\subsubsection{Pompe à chaleur}
+
+Une pompe à chaleur consomme du travail pour produire de la chaleur de chauffe. \\
+
+Le \textbf{rendement} est \textbf{supérieur à 1} (coefficient de performance).
+
+$$ \upeta = \dfrac{|Q_{ch}|}{W} = \dfrac{1}{ 1 - \dfrac{Q_{fr}}{ |Q_{ch}| } } $$
+
+
+
+\subsection{Corollaires}\label{corollaires}
+
+\subsubsection{Premier corollaire}
+
+Un cycle moteur \textbf{irréversible} a nécessairement un \textbf{rendement inférieur} au cycle moteur \textbf{réversible}.
+
+Cela s’applique seulement si les 2 cycles fonctionnent à partir de réservoirs de chaleur identiques, aux mêmes températures.
+
+
+\subsubsection{Deuxième corollaire}
+
+À condition d’utiliser des réservoirs de chaleur identiques, aux mêmes températures, tous les \textbf{moteurs réversibles} ont le \textbf{même rendement}.
+
+
+\subsubsection{Troisième corollaire}
+
+Le rendement d’un cycle moteur réversible ne dépend que de la température des réservoirs de chaleur.
+
+$$ \upeta = 1 - \dfrac{|Q_{fr}|}{Q_{ch}} $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
